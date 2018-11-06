@@ -4,8 +4,14 @@ public class Homework7 {
 	 * from 1 to x and return the result
 	 */
 	public static int problem1(int x) {
-
-	}
+		int tot = 0;
+		int currentAdd = 1;
+		 while(currentAdd <= x){
+			 tot += currentAdd;
+			 currentAdd++;
+		}
+		return tot;
+}
 
 	/* Use a loop (while or for) to find the
 	 * first index of String t in String s.
@@ -14,23 +20,40 @@ public class Homework7 {
 	 * use that method, you must use a loop
 	 */
 	public static int problem2(String s, String t) {
+		int i = 0;
+		while(i <= s.length() - t.length()){
+			String sub = s.substring(i, t.length() + i);
+			if(sub.equals(t)){
+				return i;
+				}
+				i++;
+			}
+			return -1;
+		}
 
-	}
+
 
 	/* Use a loop (while or for) to calculate and
 	 * return the value of a raised to the b
 	 * power
 	 */
 	public static int problem3(int a, int b) {
-
+		int x = 1;
+		for(int i = 1; i <= b; i++){
+			x = x * a;
+		}
+		return x;
 	}
 
 	/* Use a loop (while or for) to calculate and
 	 * return the integer portion of a divided by
 	 * b (i.e., calculate a / b using a loop)
 	 */
-	public static int problem4(int a, int b) {
-
+	 	public static int problem4(int a, int b) {
+			while(a >= b){
+				a -= b;
+			}
+			return a;
 	}
 
 	/* Use a loop (while or for) to calculate and
@@ -38,7 +61,10 @@ public class Homework7 {
 	 * (i.e., calculate a % b using a loop)
 	 */
 	 public static int problem5(int a, int b) {
-
+		 while(a >= b){
+			 a -= b;
+		 }
+		 return a;
 	 }
 
 	public static void main(String[] args) {
@@ -52,7 +78,7 @@ public class Homework7 {
 		}
 
 		if (Homework7.problem2("Hello", "llo") == 2 &&
-			Homework7.problem2("Goodbye", "q") == -1) {
+				Homework7.problem2("Goodbye", "q") == -1) {
 			System.out.println("Pass 2");
 		} else {
 			System.out.println("Fail 2");
