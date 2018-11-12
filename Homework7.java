@@ -49,6 +49,10 @@ public class Homework7 {
 	 * return the integer portion of a divided by
 	 * b (i.e., calculate a / b using a loop)
 	 */
+	/* This is finding the remainder. To find the
+	 * integer portion, you need to count the number
+	 * of times you divide
+	 */
 	 	public static int problem4(int a, int b) {
 			while(a >= b){
 				a -= b;
